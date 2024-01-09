@@ -1,7 +1,7 @@
-# comfyui-base64-to-image
+# ComfyUI Node: Base64 To Image
 Loads an image and its transparency mask from a base64-encoded data URI.
 
-![image](https://github.com/glowcone/comfyui-base64-to-image/assets/7038806/053f82b1-fa8e-43ae-93a4-b700eae7ccb1)
+![image](https://github.com/glowcone/comfyui-base64-to-image/assets/7038806/d8b1979d-79ad-400e-8fa6-06296f5447f1)
 
 You can test with the following image:
 
