@@ -25,7 +25,7 @@ class LoadImageFromBase64:
 
     def convert_color(self, image):
         if len(image.shape) > 2 and image.shape[2] >= 4:
-            return cv2.cvtColor(image, cv2.COLOR_BGRA2RGBA)
+            return cv2.cvtColor(image, cv2.COLOR_BGRA2RGB)
         return cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 
 
@@ -33,15 +33,16 @@ class LoadImageFromBase64:
         nparr = np.frombuffer(base64.b64decode(data), np.uint8)
 
         result = cv2.imdecode(nparr, cv2.IMREAD_UNCHANGED)
-        result = self.convert_color(result)
-        result = result.astype(np.float32) / 255.0
         channels = cv2.split(result)
-        image = torch.from_numpy(result)[None,]
         if len(channels) > 3:
-            mask = channels[3]
+            mask = channels[3].astype(np.float32) / 255.0
             mask = torch.from_numpy(mask)
         else:
             mask = torch.ones(channels[0].shape, dtype=torch.float32, device="cpu")
+
+        result = self.convert_color(result)
+        result = result.astype(np.float32) / 255.0
+        image = torch.from_numpy(result)[None,]
         return image, mask.unsqueeze(0)
 
 
