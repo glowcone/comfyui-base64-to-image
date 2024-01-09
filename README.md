@@ -1,5 +1,5 @@
 # ComfyUI Node: Base64 To Image
-Loads an image and its transparency mask from a base64-encoded data URI.
+Loads an image and its transparency mask from a base64-encoded data URI. This is useful for API connections as you can transfer data directly rather than specify a file location.
 
 ![image](https://github.com/glowcone/comfyui-base64-to-image/assets/7038806/d8b1979d-79ad-400e-8fa6-06296f5447f1)
 
