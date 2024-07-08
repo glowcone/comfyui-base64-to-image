@@ -1,0 +1,14 @@
+[project]
+name = "comfyui-base64-to-image"
+description = "Nodes: LoadImageFromBase64. Loads an image and its transparency mask from a base64-encoded data URI for easy API connection."
+version = "1.0.0"
+license = "LICENSE"
+
+[project.urls]
+Repository = "https://github.com/glowcone/comfyui-base64-to-image"
+#  Used by Comfy Registry https://comfyregistry.org
+
+[tool.comfy]
+PublisherId = "glowcone"
+DisplayName = "comfyui-base64-to-image"
+Icon = ""
