@@ -9,6 +9,6 @@ Repository = "https://github.com/glowcone/comfyui-base64-to-image"
 #  Used by Comfy Registry https://comfyregistry.org
 
 [tool.comfy]
-PublisherId = ""
+PublisherId = "glowcone"
 DisplayName = "comfyui-base64-to-image"
 Icon = ""
